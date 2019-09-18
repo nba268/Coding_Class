@@ -1,3 +1,20 @@
-.right_answer{
-	color: green
+h1, h2, h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400
 }
+p, li{
+	font-family: 'Source Serif Pro', serif;
+	font-size: 1.2em
+}
+h1{
+	color: #B37844
+}
+h2{
+	color: #5EA5B5
+}
+.right_answer{
+	color: #60B365
+}
+
+
+
