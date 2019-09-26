@@ -1,10 +1,10 @@
 h1, h2, h3{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400
+	font-weight: 400;
 }
 p, li{
 	font-family: 'Source Serif Pro', serif;
-	font-size: 1.2em
+	font-size: 1em
 }
 h1{
 	color: #B37844
@@ -12,9 +12,19 @@ h1{
 h2{
 	color: #5EA5B5
 }
-.right_answer{
-	color: #60B365
+.card{
+	background-color: #F5F5F5;  
+	box-shadow: 6px 7px 3px -4px rgba(0,0,0,0.2);
 }
-
+.right_answer{
+	background-color: #3A9965;
+	border-radius: 5px; 
+	padding: 5px;
+}
+#wrong_answer{
+	background-color: #BD4239; 
+	border-radius: 5px; 
+	padding: 5px; 
+}
 
 
