@@ -1,0 +1,23 @@
+body{
+	background-color: #F0F0F0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+	font-size: 40px;
+
+}
+#content{
+	margin-top: 230px;
+	text-align: center;
+}
+
+form{
+display: flex;
+flex-direction: column;
+margin-left: 600px;
+margin-right: 600px;
+}
+button{
+	margin-left: 600px;
+	margin-right: 600px;
+}
