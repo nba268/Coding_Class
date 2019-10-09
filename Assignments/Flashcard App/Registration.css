@@ -1,0 +1,23 @@
+body{
+	margin-top: 30px;
+}
+#content{
+	background-color: #F0F0F0;
+	padding: 30px; 
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 50%;
+	padding-top: 50px;
+	}
+h1{
+	font-family: 'Source Serif Pro', serif;
+	margin: auto;
+}
+form{ 
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: auto;
+	line-height: 2.6;
+	padding-bottom: 50px;
+	font-size: 20px;
+}
