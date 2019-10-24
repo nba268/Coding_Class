@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id=return_here></div>
+
+	<script type="text/javascript">
+		let today = new Date();
+		let hour = today.getHours();
+		console.log(hour); 
+
+		let ele = document.querySelector ("#return_here");
+
+		if(hour>=5 && hour<12){
+			 ele.innerHTML= "Good Morning!";
+		}
+		else if(hour>=12 && hour<18){
+			  ele.innerHTML= "Good Afternoon!";
+		}
+		else{
+			  ele.innerHTML= "Good Evening!";
+		}
+	</script>
+</body>
+</html>
+
+
