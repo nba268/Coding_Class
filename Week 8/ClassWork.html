@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<input type="text" name="nameInput" placeholder="add name">
+	<input type="text" name="colorInput" placeholder="add color">
+	<button id="createBtn">Create New</button>
+
+	<ul id="colorList"></ul>
+
+	<script type="text/javascript">
+
+		//incoming data
+		let favColors = [
+			{
+				name: "Alex",
+				color: "blue"
+			}, 
+			{
+				name: "Bill",
+				color:"green"
+			}
+
+		];
+
+		//UL element that I will add stuff to
+		const colorList = document.querySelector("#colorList");
+
+		//My form stuff 
+		const nameInput = document.querySelector("#nameInput");
+		const colorInput = document.querySelector("#colorInput");
+		const createBtn = document.querySelector("#createBtn");
+
+		
+		//logic is creating new bullets
+		let createFavColor = (person, favColor) => {
+			const listItem = document.createElement("li");
+		listItem.innerHTML = `Hello, my name is ${favColors[x].name}. My favorite color is ${favColors[x].color}`;
+		colorList.appendChild(listItem);
+
+		//callback when buttin is clicked 
+		let addNewColor = () => {
+			createFavColor(nameInput.value, colorInput.value)
+		}
+
+		// when i click on the button call the addNewColor function
+		createBtn.addEventListener("click", addNewColor)
+
+
+
+		} 
+
+		//loop through incoming data array and add to list via function
+		for(let x=0; x < favColors.length; x++){
+			console.log(`Hello, my name is ${favColors[x].name}. My favorite color is ${favColors[x].color}`);
+		}
+
+
+		//createFavColor("Alex", "blue");
+		//createFavColor("John", "orange");
+		//createFavColor("Sue", "teal");
+
+		
+
+		
+		
+
+
+
+
+	</script>
+</body>
+</html>

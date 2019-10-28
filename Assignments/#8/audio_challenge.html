@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	
+	<select id="audioSelector"></select>
+
+	<audio id="audioPlayer" control>
+		<source id="mp3_src" type="audio/mpeg">
+	</audio>
+
+
+	<!-- buttons -->
+	<button id="auLoad_btn">load</button>
+	<button id="auPlay_btn">play</button>
+	<button id="auPause_btn">pause</button>
+	<span id="timestamp"></span>
+	
+	<!-- volumeRange -->
+	<input type="range" min="0" max="100" value="50" id="volumeRange">
+
+
+	<div>
+		Music: <a href="https://www.bensound.com/royalty-free-music">https://www.bensound.com</a>
+	</div>
+
+	<script type="text/javascript">
+		
+		//cerate an array with audio
+		let music = [
+			{
+				title: "Chill",
+				file: "Audio/bensound-acousticbreeze.mp3"
+			},
+			{
+				title: "Groove",
+				file: "Audio/bensound-moose.mp3"
+			},
+			{
+
+				title: "Funny",
+				file: "Audio/bensound-funnysong.mp3"
+			},
+			{
+				title: "Socialize",
+				file: "Audio/bensound-buddy.mp3"
+			}
+		];
+
+		//store UI elemnets in variables
+		const audioSelector = document.querySelector("#audioSelector");
+		const audioPlayer = document.querySelector("#audioPlayer");
+		const auLoad_btn = document.querySelector("#auLoad_btn");
+		const auPlay_btn = document.querySelector("#auPlay_btn");
+		const auPause_btn = document.querySelector("#auPause_btn");
+		const timestamp = document.querySelector("#timestamp");
+		const volumeRange = document.querySelector("#volumeRange");
+
+		//loop the audio files + create dropdown options
+		for(let i=0; i < music.length; i++){
+			const dropdown = document.createElement("option");
+			audioSelector.appendChild(dropdown);
+			dropdown.setAttribute("value", music[i].file);
+			dropdown.innerHTML = music[i].title
+		}
+
+		//load audio that is selected from the drop down
+		let loadAudio = () => {
+			document.querySelector("#mp3_src").src = audioSelector.value;
+			audioPlayer.load();
+		}
+
+		//function to play audio
+		let playAudio = () => {
+			audioPlayer.play();
+		}
+
+		//function to pause audio
+		let pauseAudio = () => {
+			audioPlayer.pause();
+		}
+
+
+		//function to get timestamp
+		let getTimestamp = (event) => {
+			timestamp.innerHTML = Math.round(event.target.currentTime);
+		}	
+
+		//function to change volume
+		let updateVolume = (event) => {
+			audioPlayer.volume = event.target.value/100;
+		}	
+
+		//Add Event listeners too all the UI and point callbacks to functions
+		auLoad_btn.addEventListener("click", loadAudio);
+		auPlay_btn.addEventListener("click", playAudio);
+		auPause_btn.addEventListener("click", pauseAudio);
+		audioPlayer.addEventListener("timeupdate", getTimestamp);
+		volumeRange.addEventListener("change", updateVolume);
+			
+
+	</script>
+
+
+
+
+</body>
+</html>
