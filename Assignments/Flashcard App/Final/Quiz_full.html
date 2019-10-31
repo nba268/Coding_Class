@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Quiz_full.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 id="main_header">Quiz</h1>
+		<button id="end_practice">End Practice</button>
+	</header>	
+	<div id="question">
+		<div id="question_content">
+			<h2 id="currentQuestionHeader"></h2>
+			<hr>
+			<p id="questionText"></p>
+			<ol id="listItems" type="A">
+				<!-- <li><label><input type="radio" name="option">script</label></li> -->
+			</ol>
+		</div>	
+	</div>
+
+	<footer>
+			<div id="left_elements">
+			<div id="progressDots">
+				<!-- <div class="dot incorrect"></div> -->
+			</div>
+				<a href="">View Report</a>
+			</div>
+			<button id="check_answer">Check Answer</button>
+	</footer>
+
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="generate_question.js"></script>
+</body>
+</html>
