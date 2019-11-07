@@ -1,0 +1,15 @@
+body{
+	display: flex;
+	justify-content: space-around;
+	background-color: #FFFBA6; 
+}
+
+#gifs{
+	font-family: 'Patrick Hand', cursive;
+	margin-top: 170px;
+	font-size: 45px;
+}
+
+#image{
+	margin-top: 170px;
+}

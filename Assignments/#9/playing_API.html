@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="playing_API.css">
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div id="gifs"></div>
+	<img src="image/elmo.jpg" alt="elmo" id="image">
+
+	<script type="text/javascript">
+		
+		const url= `http://api.giphy.com/v1/gifs/search?q=elmo&api_key=nWOdnZZB8vYwULGLnsMBQMKF1sva01zU&limit=4`;
+
+		fetch(url)
+			.then((response) => {
+				return response.json();
+			})
+			.then ((data) => {
+				myFunction(data);
+				//console.log(data)
+			})
+
+		function myFunction(data) {
+			for(let i=0; i < data.data.length; i++){
+				const gifs = document.querySelector("#gifs");
+
+				const link = document.createElement("a");
+				const br = document.createElement("br");
+				gifs.appendChild(link);
+				gifs.appendChild(br);
+				link.setAttribute("href", data.data[i].url);
+				link.innerHTML = "Elmo: " + [i+1];
+			}
+		}
+
+
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
