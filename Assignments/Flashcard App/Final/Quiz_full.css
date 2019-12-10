@@ -54,6 +54,18 @@ h2{
 	margin-right: 6px;
 }
 
+#feedback_container {
+	position: fixed;
+	bottom: 80px;
+	right: 20px;
+	padding: 20px;
+}
+
+#feedback_container h4 {
+	margin: 0;
+	padding: 0;
+}
+
 #left_elements{
 	display: flex;
 	flex-wrap: nowrap;
@@ -63,6 +75,10 @@ footer{
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	padding: 15px;
+}
+
+.hide {
+	display: none;
 }
 
 

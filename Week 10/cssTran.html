@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#box{
+			height: 200px;
+			width: 200px;
+			background-color: red;
+
+			transition-duration: 1s;
+			transition-property: background-color, height;
+			transition-timing-function: ease-out;
+		}
+
+		#box:hover{
+			background-color: blue;
+			height: 250px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script type="text/javascript">
+		const box = document.querySelector("#box");
+		box.addEventListener('click', ()=>{
+			box.style = "background-color:green";
+		})
+		
+	</script>
+
+</body>
+</html>

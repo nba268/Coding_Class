@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#offCanvas {
+			width: 300px;
+			background-color: grey;
+			position: fixed;
+			top:0;
+			bottom: 0;
+			left: -280px;
+
+			transition-duration: .5s;
+			transition-timing-function: ease-out;
+			transition-property: left;
+		}
+
+		#offCanvas.active {
+			left: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<div id="offCanvas">
+		<button id="close_btn">close</button>
+	</div>
+
+	<button id="open_btn">Open</button>
+
+	<script type="text/javascript">
+		
+		const open_btn = document.querySelector("#open_btn");
+		const close_btn = document.querySelector("#close_btn");
+		const offCanvas = document.querySelector("#offCanvas");
+
+		open_btn.addEventListener('click', ()=>{
+			offCanvas.classList.add("active");
+		});
+
+		close_btn.addEventListener('click', ()=>{
+			offCanvas.classList.remove("active");
+		});
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
