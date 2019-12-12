@@ -65,7 +65,7 @@ check_btn.addEventListener("click", ()=>{
         document.querySelector("#navQuestions").classList.remove("hide");
         document.querySelector("#check_answer").classList.add("hide");
     }else{
-        alert("wrong")
+        alert("Wrong")
     }
 });
 

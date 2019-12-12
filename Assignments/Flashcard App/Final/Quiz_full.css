@@ -81,4 +81,23 @@ footer{
 	display: none;
 }
 
+#previous_btn{
+	font-size: 16px;
+	color: #FFFFFF; 
+	background-color: #45B5EB;
+	padding: 8px;   
+}
+
+#next_btn{
+	font-size: 16px;
+	color: #FFFFFF; 
+	background-color: #45B5EB;
+	padding: 8px;   
+}
+
+#feedbackContainer{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24px;
+}
+
 
